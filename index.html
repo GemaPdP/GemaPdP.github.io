@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Gema Pinedo de Pedro</title>
-<meta name="description" content="Obra de Gema Pinedo de Pedro.">
+<meta name="description" content="Obra, text i exposicions de Gema Pinedo de Pedro.">
 <meta property="og:title" content="Gema Pinedo de Pedro">
 <meta property="og:image" content="obra-29.jpg">
 <style>
@@ -14,18 +14,18 @@ html{scroll-behavior:smooth}
 body{background:#fff;color:var(--ink);font-family:Montserrat,"Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;overflow-x:hidden}
 header{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:10;width:min(92%,960px);display:flex;justify-content:space-between;align-items:center;padding:12px 22px;border-radius:999px;background:rgba(10,10,10,.5);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(255,255,255,.35);font-size:.85rem;letter-spacing:.08em;mix-blend-mode:normal}
 header b{font-weight:500;color:#fff}
-header a{color:#eee;text-decoration:none}
+header a{color:#eee;text-decoration:none}header nav{display:flex;gap:1.4em}header a+a{margin-left:0}
 .hero{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:57fr 43fr;position:relative;overflow:hidden}
 .dark{background:#000;position:relative;overflow:hidden}
 .dark .glow{position:absolute;border-radius:50%;filter:blur(80px);animation:drift 20s ease-in-out infinite alternate}
 .dark .g1{width:38vw;height:38vw;background:var(--red);opacity:.22;left:8%;top:20%}
 .dark .g2{width:30vw;height:30vw;background:var(--rose);opacity:.16;right:-6vw;bottom:-6vw;animation-duration:26s;animation-delay:-8s}
 @keyframes drift{to{transform:translate(6vw,5vh) scale(1.2)}}
-.float{position:absolute;animation:bob 8s ease-in-out infinite alternate;will-change:transform;-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent);mask-image:radial-gradient(closest-side,#000 70%,transparent)}
+.float{position:absolute;animation:bob 4.6s ease-in-out infinite alternate;will-change:transform;-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent);mask-image:radial-gradient(closest-side,#000 70%,transparent)}
 .float img{width:100%;display:block}
 .f1{width:clamp(240px,34vmin + 10vw,720px);left:50%;top:50%;margin-left:calc(clamp(240px,34vmin + 10vw,720px)/-2);translate:0 -50%}
 .frame{position:absolute;inset:clamp(14px,2.2vw,32px);border:1px solid #e0679a;z-index:1;pointer-events:none;opacity:.85}
-@keyframes bob{from{transform:translateY(-7px) rotate(-.8deg)}to{transform:translateY(7px) rotate(.8deg)}}
+@keyframes bob{from{transform:translateY(-2.4vmin) rotate(-2.2deg)}to{transform:translateY(2.4vmin) rotate(2.2deg)}}
 .white{display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(24px,5vw,90px) clamp(48px,11vh,130px);background:#fff;position:relative}
 .white h1{font-weight:200;font-size:clamp(2.6rem,min(6vw,11vh),6.5rem);line-height:1;letter-spacing:-.02em}
 .white h1 span{display:block;opacity:0;transform:translateY(40px);animation:up 1.2s cubic-bezier(.2,.7,.2,1) forwards}
@@ -58,10 +58,28 @@ footer strong{display:block;font-weight:300;font-size:1.6rem;letter-spacing:0;ma
 @media(max-width:900px){.hero{grid-template-columns:1fr;grid-template-rows:58vh auto;min-height:100vh}.white{padding:44px 7vw 64px}.f1{width:min(66vw,460px);margin-left:calc(min(66vw,460px)/-2)}.scroll{display:none}main{columns:2 150px;column-gap:14px}.card{margin-bottom:14px;border-radius:22px}footer{grid-template-columns:1fr;min-height:0}footer .dark{height:90px}footer .white{padding:40px 7vw 60px}}
 @media(min-width:1700px){main{columns:4 320px;max-width:1700px}.gal{padding-left:4vw;padding-right:4vw}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.white h1 span,.white p{opacity:1;transform:none}}
+
+.sec{padding:clamp(70px,9vw,140px) clamp(24px,7vw,120px);position:relative}
+.sec h2{font-weight:200;font-size:clamp(1.9rem,4.2vw,3.4rem);letter-spacing:-.01em;line-height:1.1;margin-bottom:clamp(28px,4vw,56px)}
+.sec h2:after{content:"";display:block;width:64px;height:1px;background:var(--red);margin-top:22px}
+.txt{background:#fff;color:var(--ink)}
+.txt .body{max-width:62ch}
+.txt p{font-size:clamp(1rem,1.25vw,1.15rem);line-height:1.85;margin-bottom:1.5em}
+.txt h3{font-weight:300;font-size:clamp(1.3rem,2vw,1.7rem);margin:2.4em 0 1em;color:var(--red)}
+.txt .sig{margin-top:2.4em;letter-spacing:.14em;font-size:.85rem;text-transform:uppercase;color:var(--soft)}
+.exp{background:#0a0a0b;color:#eee;overflow:hidden}
+.exp .glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.14;width:34vw;height:34vw;background:var(--red);right:-8vw;top:10%;animation:drift 28s ease-in-out infinite alternate}
+.exp ul{list-style:none;max-width:900px;position:relative}
+.exp li{padding:30px 0;border-top:1px solid rgba(255,255,255,.16)}
+.exp li:last-child{border-bottom:1px solid rgba(255,255,255,.16)}
+.exp .d{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);margin-bottom:10px}
+.exp h3{font-weight:300;font-size:clamp(1.4rem,2.4vw,2rem);margin-bottom:8px}
+.exp li p{color:#bdbdbd;line-height:1.7;font-size:.98rem}
+header a+a{margin-left:1.4em}
 </style>
 </head>
 <body>
-<header><b>GPdP</b><a href="#obras">Obras</a></header>
+<header><b>GPdP</b><nav><a href="#obras">Obras</a><a href="#text">Text</a><a href="#exposicions">Exposicions</a></nav></header>
 <section class="hero">
   <div class="dark">
     <i class="glow g1"></i><i class="glow g2"></i>
@@ -110,6 +128,22 @@ footer strong{display:block;font-weight:300;font-size:1.6rem;letter-spacing:0;ma
   <figure class="card rv"><img src="obra-31.jpg" alt="Caparazón de cangrejo naranja sobre fondo negro" loading="lazy"><figcaption>31</figcaption></figure>
 </main>
 </section>
+<section class="sec txt" id="text" lang="ca"><h2>Text de l’artista</h2><div class="body">
+<p>El meu art es desplega en l’objecte fetitxe, convertint-se en una amalgama de curiositats que transformo com una alquimista de la matèria. Em percebo com a portadora d’una figura xamànica, capaç de comunicar-se amb els ocells, aquests éssers que parlen amb les ànimes i assenyalen el camí a través de la melangia. Dins del meu cap hi ha un niu on habiten tota mena d’aus: una catedral cranial que fa de llindar entre dos mons. Una missa salvatge.</p>
+<p>En el nostre pla, les emocions es converteixen en dinasties; la matèria, en paradís, o el paradís, en la matèria mateixa. Tenim una vida i una mort i, en un ritual sagrat, hem de retornar a la terra la descomposició del cos. És el preciosisme de la primera paraula en el despertar de l’esdevingut, el gran tresor de l’existència. Treballo des d’aquest origen, en la primera guspira, sense filtres, deixant que tot es desbordi de manera instintiva. Busco traçar camins invisibles: una acció tènue, delicada i valuosa que emergeix de la boira i pren forma en l’aire per iniciar la catarsi en la matèria.</p>
+<p>Rituals, relats i paraules que se solidifiquen en objectes curiosos.</p>
+<h3>Arrels de corall, nits de plata</h3>
+<p>El meu treball s’inspira en el pensament clàssic i victorià, aquell anhel per capturar allò que només es deixa narrar quan cau atrapat en les línies sintàctiques, com un unicorn davant el reclam de la verge sacrificial. És una joieria narrativa d’excessos creatius amb un propòsit ferm: explicar el que ja s’ha explicat i narrar mitjançant els símbols que activen la memòria profunda. Entenc la joia com a experiment i poció màgica que desperta la història oculta a l’interior, perquè el complex estètic de l’objecte acompanya tot desvelament. Persegueixo la intenció de construir imatges que provoquin invocacions latents, tot atrapant aquesta resposta que sempre fuig pels senders del bosc.</p>
+<p>En aquest procés, busco accentuar el sentit dels materials: si és fusta, la natura hi batega; si és corall, l’animal marí és evocat com a esperit protector; si és or, n’aflora l’aura, i si és plata, s’invoca la nit, la lluna i el poder de l’aigua. Es genera així un infinit de relats que s’enreden de forma diferent a cada retina. La creació de l’objecte fetitxe preserva el secret, ja que només qui mira coneix la pregunta que espera resposta. Són joies que transcendeixen el valor orgànic per convertir-se en un misteri per se, peces que superen la portabilitat per disparar un ressort narratiu cap al més recòndit de la psique.</p>
+<p>Els adjectius i qualitats d’aquestes obres s’articulen com en un laboratori alquímic. Becs i Ous es viviseccionen de la seva imatge per integrar-se a la joia i conviure amb la tradició de les costureres. S’hi projecta la figura de la creadora lligada al fus i a l’ofici, mai la de la dona objecte. Són les labors de l’íntim —el cos, l’instrument, el fil i el cabell— arremolinant-se per detonar la narració. Quan els ocells i les costureres s’entremesclen en una passió salvatge, esclata un nou relat que impregna aquestes joies estranyes, carregades de símbol i d’òrgan. Són dispositius que generen ús, desús i nou ús de la història, i tornen sempre al món privat de l’ull que observa.</p>
+<p class="sig">Gema Pinedo de Pedro</p></div></section>
+<section class="sec exp" id="exposicions" lang="ca"><i class="glow"></i><h2>Exposicions</h2>
+<ul>
+<li><div class="d">5 setembre – 20 octubre 2026</div><h3>Memòria</h3><p>Personal Galeria, Carrer Major 36, Tarragona. Exposició col·lectiva de joieria contemporània comissariada per Sílvia Serra Albaladejo, amb una peça de Gema Pinedo de Pedro.</p></li>
+<li><div class="d">15 – 18 octubre 2026</div><h3>Rebost</h3><p>Atypical — Experimental Ceramic Studio, Carrer de Sant Joaquim 31, Gràcia, Barcelona. Comissariada per Martha Gómez i Gema Pinedo de Pedro, que també hi participa.</p></li>
+<li><div class="d">12 juny – 13 setembre 2026</div><h3>Rebost</h3><p>Centre d’Artesania Catalunya, Carrer dels Banys Nous 11, Barcelona. Comissariada per Martha Gómez i Gema Pinedo de Pedro, que també hi participa.</p></li>
+<li><div class="d">30 abril – 25 maig 2026</div><h3>Anima Mea</h3><p>Castell de Cornellà, Cornellà de Llobregat. Amb Leonor Ivanna.</p></li>
+</ul></section>
 <footer><div class="dark"><i class="glow g1"></i></div><div class="white"><strong>Gema Pinedo de Pedro</strong><p>Más obra y apartados, próximamente.</p></div></footer>
 <div id="lb"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
 <script>
