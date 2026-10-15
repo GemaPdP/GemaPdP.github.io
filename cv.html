@@ -28,7 +28,7 @@ h2{font-weight:600;font-size:7.4pt;letter-spacing:.26em;text-transform:uppercase
 .bar a,.bar button{font:inherit;letter-spacing:inherit;text-transform:inherit;color:#141212;background:none;border:1px solid #e0679a;border-radius:999px;padding:9px 20px;text-decoration:none;cursor:pointer}
 .bar a:first-child{border-color:transparent;padding-left:0}
 @media print{.bar{display:none}}
-@media screen and (max-width:820px){.page{transform:scale(.45);margin-bottom:-160mm}}
+@media screen and (max-width:820px){.page{margin:70px 0 20px;box-shadow:none}.bar{gap:8px;padding:10px;font-size:9px;letter-spacing:.12em}.bar a,.bar button{padding:8px 12px}}
 </style></head><body>
 <div class="bar"><a href="./">← Gema Pinedo de Pedro</a><button onclick="window.print()">Desa com a PDF / Imprimeix</button></div>
 <div class="page"><div class="frame"></div>
@@ -66,4 +66,4 @@ h2{font-weight:600;font-size:7.4pt;letter-spacing:.26em;text-transform:uppercase
 <div class="row"><div class="y">2004</div><div class="t"><i>Galeria Òpera Joies, Vilafranca del Penedès</i></div></div>
 </section>
 <div class="foot"><span>Gema Pinedo de Pedro</span><span>CV artístic</span></div></div>
-</body></html>
+<script>function fit(){var p=document.querySelector('.page');if(matchMedia('print').matches)return;p.style.zoom=innerWidth<820?(innerWidth/794):1}fit();addEventListener('resize',fit);addEventListener('beforeprint',function(){document.querySelector('.page').style.zoom=1});addEventListener('afterprint',fit)</script></body></html>
