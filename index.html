@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gema Pinedo de Pedro</title>
+<meta name="description" content="Obra de Gema Pinedo de Pedro.">
+<meta property="og:title" content="Gema Pinedo de Pedro">
+<meta property="og:image" content="obra-29.jpg">
+<style>
+:root{--ink:#141212;--soft:#777;--rose:#e7a9a4;--red:#e0679a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--ink);font-family:Montserrat,"Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;overflow-x:hidden}
+header{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:10;width:min(92%,960px);display:flex;justify-content:space-between;align-items:center;padding:12px 22px;border-radius:999px;background:rgba(10,10,10,.5);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(255,255,255,.35);font-size:.85rem;letter-spacing:.08em;mix-blend-mode:normal}
+header b{font-weight:500;color:#fff}
+header a{color:#eee;text-decoration:none}
+.hero{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:57fr 43fr;position:relative;overflow:hidden}
+.dark{background:#000;position:relative;overflow:hidden}
+.dark .glow{position:absolute;border-radius:50%;filter:blur(80px);animation:drift 20s ease-in-out infinite alternate}
+.dark .g1{width:38vw;height:38vw;background:var(--red);opacity:.22;left:8%;top:20%}
+.dark .g2{width:30vw;height:30vw;background:var(--rose);opacity:.16;right:-6vw;bottom:-6vw;animation-duration:26s;animation-delay:-8s}
+@keyframes drift{to{transform:translate(6vw,5vh) scale(1.2)}}
+.float{position:absolute;animation:bob 8s ease-in-out infinite alternate;will-change:transform;-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent);mask-image:radial-gradient(closest-side,#000 70%,transparent)}
+.float img{width:100%;display:block}
+.f1{width:clamp(240px,34vmin + 10vw,720px);left:50%;top:50%;margin-left:calc(clamp(240px,34vmin + 10vw,720px)/-2);translate:0 -50%}
+.frame{position:absolute;inset:clamp(14px,2.2vw,32px);border:1px solid #e0679a;z-index:1;pointer-events:none;opacity:.85}
+@keyframes bob{from{transform:translateY(-7px) rotate(-.8deg)}to{transform:translateY(7px) rotate(.8deg)}}
+.white{display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(24px,5vw,90px) clamp(48px,11vh,130px);background:#fff;position:relative}
+.white h1{font-weight:200;font-size:clamp(2.6rem,min(6vw,11vh),6.5rem);line-height:1;letter-spacing:-.02em}
+.white h1 span{display:block;opacity:0;transform:translateY(40px);animation:up 1.2s cubic-bezier(.2,.7,.2,1) forwards}
+.white h1 span:nth-child(2){animation-delay:.18s;font-weight:500}
+.white h1 span:nth-child(3){animation-delay:.36s}
+.white p{margin-top:2rem;padding-top:1.4rem;border-top:1px solid #ddd;width:min(100%,260px);color:var(--soft);letter-spacing:.3em;font-size:.8rem;text-transform:uppercase;opacity:0;animation:up 1.2s .7s forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.scroll{position:absolute;bottom:24px;left:50%;width:1px;height:50px;background:linear-gradient(#aaa,transparent);animation:pulse 2s infinite;z-index:2}
+@keyframes pulse{50%{opacity:.2;transform:scaleY(.6)}}
+.gal{background:#0a0a0b;padding:7vw 5vw 6vw;position:relative;overflow:hidden}
+.gal .glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.14;animation:drift 28s ease-in-out infinite alternate}
+.gal .g1{width:40vw;height:40vw;background:var(--rose);right:-10vw;top:10vh}
+.gal .g2{width:34vw;height:34vw;background:var(--red);left:-10vw;top:90vh;animation-delay:-9s}
+main{columns:3 320px;column-gap:2.2vw;max-width:1300px;margin:auto;position:relative}
+.card{position:relative;break-inside:avoid;margin:0 0 2.2vw;border-radius:28px;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);cursor:zoom-in;transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s}
+.card.rv.in:hover{transform:translateY(-8px) scale(1.012);box-shadow:0 36px 80px rgba(231,169,164,.18)}
+.card img{width:100%;display:block;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.05)}
+.card figcaption{position:absolute;left:16px;bottom:14px;padding:4px 12px;border-radius:999px;font-size:.72rem;letter-spacing:.2em;color:#eee;background:rgba(0,0,0,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.rv{opacity:0;transform:translateY(60px);transition:opacity 1.1s,transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+footer{display:grid;grid-template-columns:1fr 1fr;min-height:60vh}
+footer .dark{display:block}
+footer .white p{margin:0;animation:none;opacity:1;transform:none}
+footer strong{display:block;font-weight:300;font-size:1.6rem;letter-spacing:0;margin-bottom:.8rem}
+#lb{position:fixed;inset:0;z-index:50;display:none;place-items:center;background:rgba(0,0,0,.78);backdrop-filter:blur(26px);-webkit-backdrop-filter:blur(26px);cursor:zoom-out}
+#lb.on{display:grid;animation:fade .4s}
+#lb img{max-width:92vw;max-height:90vh;border-radius:20px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+@keyframes fade{from{opacity:0}}
+@media(max-width:900px){.hero{grid-template-columns:1fr;grid-template-rows:58vh auto;min-height:100vh}.white{padding:44px 7vw 64px}.f1{width:min(66vw,460px);margin-left:calc(min(66vw,460px)/-2)}.scroll{display:none}main{columns:2 150px;column-gap:14px}.card{margin-bottom:14px;border-radius:22px}footer{grid-template-columns:1fr;min-height:0}footer .dark{height:90px}footer .white{padding:40px 7vw 60px}}
+@media(min-width:1700px){main{columns:4 320px;max-width:1700px}.gal{padding-left:4vw;padding-right:4vw}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.white h1 span,.white p{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><b>GPdP</b><a href="#obras">Obras</a></header>
+<section class="hero">
+  <div class="dark">
+    <i class="glow g1"></i><i class="glow g2"></i>
+    <div class="frame"></div>
+    <div class="float f1"><img src="obra-29.jpg" alt=""></div>
+  </div>
+  <div class="white">
+    <h1><span>Gema</span><span>Pinedo</span><span>de Pedro</span></h1>
+    <p>Obra</p>
+  </div>
+  <div class="scroll"></div>
+</section>
+<section class="gal">
+<i class="glow g1"></i><i class="glow g2"></i>
+<main id="obras">
+  <figure class="card rv"><img src="obra-1.jpg" alt="Dos piezas con madera, pelo oscuro y alambre" loading="lazy"><figcaption>01</figcaption></figure>
+  <figure class="card rv"><img src="obra-2.jpg" alt="Colgante translúcido blanco con vetas rojas sobre cadena fina" loading="lazy"><figcaption>02</figcaption></figure>
+  <figure class="card rv"><img src="obra-3.jpg" alt="Dos piezas de piedra rosada con cierre de alambre" loading="lazy"><figcaption>03</figcaption></figure>
+  <figure class="card rv"><img src="obra-4.jpg" alt="Pieza ovoide blanca con una forma roja en relieve, sostenida con la mano" loading="lazy"><figcaption>04</figcaption></figure>
+  <figure class="card rv"><img src="obra-5.jpg" alt="Pieza ovalada de tono ámbar con una oreja en relieve" loading="lazy"><figcaption>05</figcaption></figure>
+  <figure class="card rv"><img src="obra-6.jpg" alt="Pieza con forma de rostro en tonos ocres y dorados" loading="lazy"><figcaption>06</figcaption></figure>
+  <figure class="card rv"><img src="obra-7.jpg" alt="Pieza ovoide blanca con una flor dibujada en rojo y cordón rojo" loading="lazy"><figcaption>07</figcaption></figure>
+  <figure class="card rv"><img src="obra-8.jpg" alt="Collar con alas oscuras, una pieza ovalada y pelo castaño" loading="lazy"><figcaption>08</figcaption></figure>
+  <figure class="card rv"><img src="obra-9.jpg" alt="Pieza alargada de tono marfil con un triángulo oscuro, un aro de plata y una zona roja" loading="lazy"><figcaption>09</figcaption></figure>
+  <figure class="card rv"><img src="obra-10.jpg" alt="Dos piezas de latón dorado y cobre, vistas por delante y por detrás" loading="lazy"><figcaption>10</figcaption></figure>
+  <figure class="card rv"><img src="obra-11.jpg" alt="Pieza ovalada de mármol veteado con una miniatura circular y una aguja" loading="lazy"><figcaption>11</figcaption></figure>
+  <figure class="card rv"><img src="obra-12.jpg" alt="Colgante de madera clara con una pequeña forma plateada, borde rojo y cordón" loading="lazy"><figcaption>12</figcaption></figure>
+  <figure class="card rv"><img src="obra-13.jpg" alt="Aro dorado con formas de fieltro oscuro y puntas metálicas" loading="lazy"><figcaption>13</figcaption></figure>
+  <figure class="card rv"><img src="obra-14.jpg" alt="Anillo de hilos de pelo con formas circulares" loading="lazy"><figcaption>14</figcaption></figure>
+  <figure class="card rv"><img src="obra-15.jpg" alt="Estructura de hilo oscuro en círculos, con una pieza translúcida y hojas verdes" loading="lazy"><figcaption>15</figcaption></figure>
+  <figure class="card rv"><img src="obra-16.jpg" alt="Dos piezas: una de hilo oscuro con varios brazos y otra de madera retorcida" loading="lazy"><figcaption>16</figcaption></figure>
+  <figure class="card rv"><img src="obra-17.jpg" alt="Cinco piezas circulares de tela, cuatro rosas y una crema, con líneas bordadas" loading="lazy"><figcaption>17</figcaption></figure>
+  <figure class="card rv"><img src="obra-18.jpg" alt="Pieza de hilos oscuros y dorados en círculos entrelazados" loading="lazy"><figcaption>18</figcaption></figure>
+  <figure class="card rv"><img src="obra-19.jpg" alt="Pieza dorada con un velo blanco de tul y pequeñas cuentas rosas, sobre fondo blanco" loading="lazy"><figcaption>19</figcaption></figure>
+  <figure class="card rv"><img src="obra-20.jpg" alt="Relieve dorado en forma de flor con un rostro en el centro, sobre fondo blanco" loading="lazy"><figcaption>20</figcaption></figure>
+  <figure class="card rv"><img src="obra-21.jpg" alt="Dos huevos, uno rosa con círculos negros y otro blanco con puntos negros, sobre fondo blanco" loading="lazy"><figcaption>21</figcaption></figure>
+  <figure class="card rv"><img src="obra-22.jpg" alt="Colgante de cinta negra con una pieza ovalada oscura cubierta de puntos rosas y una tapa metálica" loading="lazy"><figcaption>22</figcaption></figure>
+  <figure class="card rv"><img src="obra-23.jpg" alt="Piezas florales rosadas dispuestas en círculo alrededor de un cráneo de animal y una columna vertebral, sobre fondo blanco" loading="lazy"><figcaption>23</figcaption></figure>
+  <figure class="card rv"><img src="obra-24.jpg" alt="Persona con un collar largo de frutos rojos sobre un vestido negro, ante un muro de piedra" loading="lazy"><figcaption>24</figcaption></figure>
+  <figure class="card rv"><img src="obra-25.jpg" alt="Pieza roja colgada en una sala blanca, con texto parcialmente visible en la imagen" loading="lazy"><figcaption>25</figcaption></figure>
+  <figure class="card rv"><img src="obra-26.jpg" alt="Collar de conchas blancas con perlas pequeñas sobre fondo negro" loading="lazy"><figcaption>26</figcaption></figure>
+  <figure class="card rv"><img src="obra-27.jpg" alt="Colgante de concha nacarada con perlas y cadena, sobre fondo negro" loading="lazy"><figcaption>27</figcaption></figure>
+  <figure class="card rv"><img src="obra-28.jpg" alt="Pendientes de hilo oscuro con perlas pequeñas y un disco en espiral, sobre fondo rosado" loading="lazy"><figcaption>28</figcaption></figure>
+  <figure class="card rv"><img src="obra-29.jpg" alt="Pieza con un abanico translúcido sobre un hueso, sobre fondo negro" loading="lazy"><figcaption>29</figcaption></figure>
+  <figure class="card rv"><img src="obra-30.jpg" alt="Piezas de fieltro y cinta en crema, rosa y verde, con cintas amarillas, sobre fondo blanco" loading="lazy"><figcaption>30</figcaption></figure>
+  <figure class="card rv"><img src="obra-31.jpg" alt="Caparazón de cangrejo naranja sobre fondo negro" loading="lazy"><figcaption>31</figcaption></figure>
+</main>
+</section>
+<footer><div class="dark"><i class="glow g1"></i></div><div class="white"><strong>Gema Pinedo de Pedro</strong><p>Más obra y apartados, próximamente.</p></div></footer>
+<div id="lb"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const fl=[...document.querySelectorAll('.float')];
+addEventListener('scroll',()=>{const y=scrollY;fl.forEach(f=>f.style.marginTop=(y*f.dataset.s*-1)+'px')},{passive:true});
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.card').forEach(c=>c.onclick=()=>{li.src=c.querySelector('img').src;li.alt=c.querySelector('img').alt;lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');
+addEventListener('keydown',e=>e.key==='Escape'&&lb.classList.remove('on'));
+</script>
+</body>
+</html>
